@@ -3,120 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>D Mobil – Servis mobilnih telefona</title>
-<meta name="description" content="D Mobil – profesionalan servis mobilnih telefona. iPhone i Android popravke, matične ploče, ekrani, baterije. Dugogodišnje iskustvo.">
+
+<title>D Mobil Pančevo – Servis mobilnih telefona i popravka iPhone</title>
+<meta name="description" content="D Mobil Pančevo – profesionalan servis mobilnih telefona. iPhone i Android popravke, matične ploče, ekrani, baterije. Miloša Obrenovića 12.">
+
 <style>
+:root {
+    --main-color: #0a3cff;
+    --light-gray: #f4f4f4;
+    --text-color: #222;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f4f4;
-    color: #222;
+    background: var(--light-gray);
+    color: var(--text-color);
+    line-height: 1.6;
 }
+
 header {
-    background: #000080;
+    background: var(--main-color);
     color: #fff;
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
+
 header h1 {
     margin: 0;
-    font-size: 42px;
+    font-size: 44px;
 }
+
 header p {
     font-size: 18px;
     margin-top: 10px;
 }
+
 section {
     max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
+    margin: 30px auto;
     background: #fff;
-    margin-top: 20px;
+    padding: 40px 20px;
 }
+
 h2 {
-    border-left: 5px solid #000;
-    padding-left: 10px;
+    margin-top: 0;
+    border-left: 5px solid var(--main-color);
+    padding-left: 12px;
 }
+
 .services ul {
     list-style: none;
     padding: 0;
 }
+
 .services li {
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #ddd;
 }
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fafafa;
+}
+
+/* GALERIJA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery div {
+    height: 160px;
+    background: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 14px;
+}
+
+/* MAPA */
+.map iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* CONTACT */
 .contact {
-    background: #000;
+    background: var(--main-color);
     color: #fff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
+
 .contact a {
     color: #fff;
-    font-size: 20px;
     text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
+    font-size: 20px;
+    display: block;
+    margin: 8px 0;
 }
+
 footer {
     text-align: center;
-    padding: 20px;
     font-size: 14px;
-    color: #777;
+    padding: 20px;
+    color: #666;
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <h1>D Mobil</h1>
-    <p>Profesionalan servis mobilnih telefona</p>
+    <h1>D Mobil Pančevo</h1>
+    <p>Servis mobilnih telefona – iPhone i Android</p>
 </header>
 
 <section>
     <h2>O nama</h2>
     <p>
-    Pružamo profesionalnu uslugu servisa i popravke iPhone telefona svih modela, sa posebnom specijalizacijom za popravku i remont matičnih ploča.
-Naš servis čini iskusan tim tehničara sa dugogodišnjim iskustvom u radu sa složenim i zahtevnim kvarovima, uključujući one koje mnogi servisi ne prihvataju.
-    </p>
-    <p>
-        Radimo odgovorno, precizno i bez improvizacija. Svaki uređaj prolazi detaljnu
-        dijagnostiku kako bi kvar bio pravilno rešen.
+        D Mobil Pančevo je profesionalni servis mobilnih telefona sa fokusom na preciznu
+        dijagnostiku i kvalitetnu popravku iPhone i Android uređaja.
+        Specijalizovani smo i za zahtevne popravke matičnih ploča.
     </p>
 </section>
 
 <section class="services">
     <h2>Usluge</h2>
     <ul>
-        <li>Popravka iPhone i Android telefona</li>
-        <li>Popravka matičnih ploča (baseband, no power, reboot)</li>
-        <li>Zamena ekrana i stakala</li>
-        <li>Zamena baterija i konektora punjenja</li>
-        <li>Popravka nakon pada u vodu</li>
-        <li>Softverske intervencije i dijagnostika</li>
+        <li>Servis iPhone telefona – svi modeli</li>
+        <li>Servis Android telefona</li>
+        <li>Popravka matičnih ploča</li>
+        <li>Zamena ekrana, baterija i konektora</li>
+        <li>Popravka telefona nakon vode</li>
     </ul>
 </section>
 
 <section>
-    <h2>Zašto D Mobil?</h2>
-    <p>
-        • Dugogodišnje iskustvo<br>
-        • Profesionalna oprema<br>
-        • Precizna dijagnostika<br>
-        • Iskren odnos prema klijentima<br>
-        • Fokus na kvalitet, ne brzinu
+    <h2>Zašto D Mobil</h2>
+    <div class="highlights">
+        <div class="box">Iskustvo i stručnost</div>
+        <div class="box">Profesionalna oprema</div>
+        <div class="box">Precizna dijagnostika</div>
+        <div class="box">Lokalni servis – Pančevo</div>
+    </div>
+</section>
+
+<section>
+    <h2>Galerija servisa</h2>
+    <div class="gallery">
+        <div>Slika servisa 1</div>
+        <div>Slika servisa 2</div>
+        <div>Slika servisa 3</div>
+    </div>
+    <p style="margin-top:15px;font-size:14px;">
+        Ovde kasnije ubacujemo tvoje prave slike (radnja, oprema, popravke).
     </p>
+</section>
+
+<section class="map">
+    <h2>Gde se nalazimo</h2>
+    <iframe 
+        src="https://www.google.com/maps?q=Milo%C5%A1a+Obrenovi%C4%87a+12,+Pan%C4%8Devo&output=embed">
+    </iframe>
 </section>
 
 <div class="contact">
     <h2>Kontakt</h2>
-    <p>Pozovite ili pišite za informacije</p>
-    <a href="tel:+38166366245">📞 066 366 245</a><br>
+    <p>📍 Miloša Obrenovića 12, Pančevo 26000</p>
+    <a href="tel:+38166366245">📞 066 366 245</a>
     <a href="mailto:d.mobilpancevo@gmail.com">✉️ d.mobilpancevo@gmail.com</a>
 </div>
 
 <footer>
-    © 2025 D Mobil – Servis mobilnih telefona
+    © 2025 D Mobil Pančevo – Servis mobilnih telefona
 </footer>
 
 </body>
