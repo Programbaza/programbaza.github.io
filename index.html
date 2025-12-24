@@ -9,6 +9,35 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  .menu-toggle{
+  display:none;
+  font-size:26px;
+  cursor:pointer;
+}
+
+@media(max-width:900px){
+  nav a{
+    display:block;
+    margin:15px 0;
+  }
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:60px;
+    right:20px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+  }
+  .nav-links.active{
+    display:block;
+  }
+  .menu-toggle{
+    display:block;
+  }
+}
+
 :root{
   --blue:#0b4bff;
   --dark:#0e1424;
@@ -251,6 +280,10 @@ footer{
 </footer>
 
 <script>
+  function toggleMenu(){
+  document.querySelector('.nav-links').classList.toggle('active');
+}
+
 const reveals = document.querySelectorAll('.reveal');
 function revealOnScroll(){
   reveals.forEach(el=>{
