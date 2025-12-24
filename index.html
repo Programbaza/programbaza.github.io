@@ -1,246 +1,164 @@
-#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>D Mobil Pančevo – Servis mobilnih telefona</title>
-<meta name="description" content="D Mobil Pančevo – profesionalan servis mobilnih telefona. iPhone i Android popravke, matične ploče, ekrani, baterije.">
-        
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>D Mobil Pančevo | Servis mobilnih telefona</title>
 
-</section>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root {
-    --primary: #0a3cff;
-    --dark: #0b1220;
-    --light: #f6f8fc;
-    --text: #1a1a1a;
+:root{
+  --blue:#0b4bff;
+  --dark:#0e1424;
+  --gray:#f1f3f8;
 }
 
-* {
-    box-sizing: border-box;
+body{
+  margin:0;
+  font-family:Poppins, sans-serif;
+  background:var(--gray);
+  color:#111;
 }
 
-body {
-    margin: 0;
-    font-family: 'Inter', Arial, sans-serif;
-    background: var(--light);
-    color: var(--text);
+header{
+  background:radial-gradient(circle at top, #123bff, #071a6b);
+  color:#fff;
+  padding:90px 20px;
 }
 
-/* HERO */
-.hero {
-    background: linear-gradient(135deg, #0a3cff, #0030c8);
-    color: #fff;
-    padding: 90px 20px;
+.container{
+  max-width:1200px;
+  margin:auto;
 }
 
-.hero-content {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
+header h1{
+  font-size:48px;
+  margin-bottom:15px;
 }
 
-.hero h1 {
-    font-size: 46px;
-    margin: 0 0 15px;
+header p{
+  font-size:18px;
+  max-width:600px;
 }
 
-.hero p {
-    font-size: 18px;
-    line-height: 1.6;
+.buttons a{
+  display:inline-block;
+  margin-top:25px;
+  margin-right:15px;
+  padding:14px 28px;
+  background:#fff;
+  color:#123bff;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
 }
 
-.hero .cta {
-    margin-top: 25px;
+section{
+  padding:70px 20px;
 }
 
-.hero a {
-    background: #fff;
-    color: var(--primary);
-    padding: 14px 26px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 15px;
+h2{
+  font-size:34px;
+  margin-bottom:40px;
+  text-align:center;
 }
 
-/* SECTIONS */
-section {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 20px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
 }
 
-.section-title {
-    font-size: 32px;
-    margin-bottom: 30px;
+.box{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
 }
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+.dark{
+  background:var(--dark);
+  color:#fff;
 }
 
-.card {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+.contact-box{
+  text-align:center;
 }
 
-.card h3 {
-    margin-top: 0;
+.contact-box a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  margin:10px 0;
 }
 
-/* INFO */
-.info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+.map{
+  width:100%;
+  height:420px;
+  border:0;
+  border-radius:18px;
 }
 
-/* CONTACT */
-.contact {
-    background: var(--dark);
-    color: #fff;
-    padding: 70px 20px;
-}
-
-.contact-inner {
-    max-width: 1100px;
-    margin: auto;
-    text-align: center;
-}
-
-.contact a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 14px;
-    color: #777;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-    .hero-content,
-    .info {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        text-align: center;
-    }
+footer{
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  color:#777;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<div class="hero">
-    <div class="hero-content">
-        <div>
-            <h1>D Mobil Pančevo</h1>
-            <p>
-                Profesionalni servis mobilnih telefona.
-                Specijalizovani za iPhone i Android uređaje,
-                kao i zahtevne popravke matičnih ploča.
-            </p>
-            <div class="cta">
-                <a href="tel:+38166366245">Pozovi odmah</a>
-                <a href="https://wa.me/38166366245">WhatsApp</a>
-            </div>
-        </div>
-        <div>
-            <div class="card">
-                <strong>📍 Adresa</strong><br>
-                Miloša Obrenovića 12<br>
-                Pančevo 26000
-            </div>
-        </div>
+<header>
+  <div class="container">
+    <h1>D Mobil Pančevo</h1>
+    <p>
+      Profesionalni servis mobilnih telefona.  
+      iPhone i Android popravke, matične ploče, napredne intervencije.
+    </p>
+    <div class="buttons">
+      <a href="tel:+38166366245">Pozovi</a>
+      <a href="https://wa.me/38166366245">WhatsApp</a>
     </div>
-</div>
+  </div>
+</header>
 
-<!-- USLUGE -->
 <section>
-    <h2 class="section-title">Usluge</h2>
-    <div class="cards">
-        <div class="card">Servis iPhone telefona – svi modeli</div>
-        <div class="card">Servis Android telefona</div>
-        <div class="card">Popravka matičnih ploča</div>
-        <div class="card">Zamena ekrana i baterija</div>
-        <div class="card">Popravke nakon vode</div>
-    </div>
+  <h2>Naše usluge</h2>
+  <div class="grid">
+    <div class="box">iPhone servis – svi modeli</div>
+    <div class="box">Android servis</div>
+    <div class="box">Popravka matičnih ploča</div>
+    <div class="box">Zamena ekrana i baterija</div>
+    <div class="box">Telefoni nakon kontakta sa vodom</div>
+    <div class="box">Dijagnostika i savetovanje</div>
+  </div>
 </section>
 
-<!-- O NAMA -->
-<section class="info">
-    <div>
-        <h2 class="section-title">O nama</h2>
-        <p>
-            D Mobil je specijalizovani servis mobilnih telefona iz Pančeva,
-            sa fokusom na kvalitet, preciznu dijagnostiku i dugoročna rešenja.
-            Radimo bez improvizacija i sa profesionalnom opremom.
-        </p>
+<section class="dark">
+  <h2>Kontakt</h2>
+  <div class="container grid">
+    <div class="contact-box">
+      <p>📍 Miloša Obrenovića 12<br>Pančevo 26000</p>
+      <a href="tel:+38166366245">📞 066 366 245</a>
+      <a href="mailto:d.mobilpancevo@gmail.com">✉️ d.mobilpancevo@gmail.com</a>
     </div>
-    <div>
-        <h2 class="section-title">Zašto mi</h2>
-        <p>
-            ✔ Dugogodišnje iskustvo<br>
-            ✔ Profesionalna servisna oprema<br>
-            ✔ Iskren odnos prema klijentima<br>
-            ✔ Lokalni servis u Pančevu
-        </p>
-    </div>
+    <iframe 
+      class="map"
+      src="https://www.google.com/maps?q=Milo%C5%A1a%20Obrenovi%C4%87a%2012%20Pan%C4%8Devo&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
 </section>
-
-<!-- KONTAKT -->
-<div class="contact">
-    <div class="contact-inner">
-        <h2>D Mobil – Kontakt</h2>
-        <a href="tel:+38166366245">📞 066 366 245</a>
-        <a href="mailto:d.mobilpancevo@gmail.com">✉️ d.mobilpancevo@gmail.com</a>
-    </div>
-</div>
 
 <footer>
-    © 2025 D Mobil Pančevo – Servis mobilnih telefona
+© 2025 D Mobil Pančevo – Servis mobilnih telefona
 </footer>
-<!-- WhatsApp dugme -->
-<a href="https://wa.me/38166366245" target="_blank" class="whatsapp-button">
-    WhatsApp
-</a>
-
-<style>
-.whatsapp-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: #fff;
-    padding: 14px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 999;
-}
-</style>
 
 </body>
 </html>
+
