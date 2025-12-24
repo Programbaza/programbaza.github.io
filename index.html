@@ -9,43 +9,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  .menu-toggle{
-  display:none;
-  font-size:26px;
-  cursor:pointer;
-}
-
-@media(max-width:900px){
-  nav a{
-    display:block;
-    margin:15px 0;
-  }
-  .nav-links{
-    display:none;
-    position:absolute;
-    top:60px;
-    right:20px;
-    background:#fff;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-  }
-  .nav-links.active{
-    display:block;
-  }
-  .menu-toggle{
-    display:block;
-  }
-}
-
 :root{
   --blue:#0b4bff;
   --dark:#0e1424;
   --gray:#f1f3f8;
-}
-
-html{
-  scroll-behavior:smooth;
 }
 
 body{
@@ -55,58 +22,23 @@ body{
   color:#111;
 }
 
-/* MENU */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#fff;
-  z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
-}
-
-.nav-inner{
-  max-width:1200px;
-  margin:auto;
-  padding:15px 20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.logo{
-  font-weight:700;
-  font-size:20px;
-  color:var(--blue);
-}
-
-nav a{
-  margin-left:25px;
-  text-decoration:none;
-  color:#111;
-  font-weight:500;
-}
-
-nav a:hover{
-  color:var(--blue);
-}
-
-/* ANIM */
+/* ANIMATIONS */
 .reveal{
   opacity:0;
   transform:translateY(30px);
-  transition:.8s ease;
+  transition:all .8s ease;
 }
+
 .reveal.active{
   opacity:1;
-  transform:none;
+  transform:translateY(0);
 }
 
 /* HEADER */
 header{
   background:radial-gradient(circle at top, #123bff, #071a6b);
   color:#fff;
-  padding:140px 20px 90px;
+  padding:90px 20px;
 }
 
 .container{
@@ -139,11 +71,12 @@ header p{
 
 .buttons a:hover{
   transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
 
 /* SECTIONS */
 section{
-  padding:80px 20px;
+  padding:70px 20px;
 }
 
 h2{
@@ -168,9 +101,9 @@ h2{
 
 .box:hover{
   transform:translateY(-5px);
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
-/* DARK */
 .dark{
   background:var(--dark);
   color:#fff;
@@ -206,26 +139,12 @@ footer{
 
 <body>
 
-<!-- MENU -->
-<nav>
-  <div class="nav-inner">
-    <div class="logo">D Mobil</div>
-    <div>
-      <a href="#pocetna">Početna</a>
-      <a href="#usluge">Usluge</a>
-      <a href="#onama">O nama</a>
-      <a href="#kontakt">Kontakt</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<header id="pocetna" class="reveal">
+<header class="reveal">
   <div class="container">
     <h1>D Mobil Pančevo</h1>
     <p>
-      Profesionalni servis mobilnih telefona – iPhone i Android.
-      Specijalizovani za matične ploče i zahtevne popravke.
+      Profesionalni servis mobilnih telefona.  
+      iPhone i Android popravke, matične ploče, napredne intervencije.
     </p>
     <div class="buttons">
       <a href="tel:+38166366245">Pozovi</a>
@@ -234,9 +153,8 @@ footer{
   </div>
 </header>
 
-<!-- USLUGE -->
-<section id="usluge" class="reveal">
-  <h2>Usluge</h2>
+<section class="reveal">
+  <h2>Naše usluge</h2>
   <div class="grid">
     <div class="box">iPhone servis – svi modeli</div>
     <div class="box">Android servis</div>
@@ -247,20 +165,7 @@ footer{
   </div>
 </section>
 
-<!-- O NAMA -->
-<section id="onama" class="reveal">
-  <h2>O nama</h2>
-  <div class="container">
-    <p style="max-width:800px;margin:auto;text-align:center;">
-      D Mobil je specijalizovani servis mobilnih telefona iz Pančeva.
-      Radimo profesionalno, precizno i bez improvizacija, sa fokusom
-      na dugoročna rešenja i kvalitet popravke.
-    </p>
-  </div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt" class="dark reveal">
+<section class="dark reveal">
   <h2>Kontakt</h2>
   <div class="container grid">
     <div class="contact-box">
@@ -268,7 +173,8 @@ footer{
       <a href="tel:+38166366245">📞 066 366 245</a>
       <a href="mailto:d.mobilpancevo@gmail.com">✉️ d.mobilpancevo@gmail.com</a>
     </div>
-    <iframe class="map"
+    <iframe 
+      class="map"
       src="https://www.google.com/maps?q=Milo%C5%A1a%20Obrenovi%C4%87a%2012%20Pan%C4%8Devo&output=embed"
       loading="lazy">
     </iframe>
@@ -280,18 +186,17 @@ footer{
 </footer>
 
 <script>
-  function toggleMenu(){
-  document.querySelector('.nav-links').classList.toggle('active');
-}
-
 const reveals = document.querySelectorAll('.reveal');
+
 function revealOnScroll(){
   reveals.forEach(el=>{
-    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
       el.classList.add('active');
     }
   });
 }
+
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 </script>
