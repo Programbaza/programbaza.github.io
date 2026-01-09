@@ -202,6 +202,20 @@ footer{
   width:100%;
   border-radius:24px;
 }
+    .hero-content{
+  max-width:520px;
+}
+
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+.hero-image img{
+  box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+
 </style>
 
 </head>
@@ -224,19 +238,24 @@ footer{
 
 <!-- HERO -->
 <header id="pocetna" class="reveal">
-  <div class="container">
-    <div class="hero-image">
-  <img src="images/IMG_6290.jpg">
-</div>
+  <div class="container hero">
 
-    <h1>D Mobil Pančevo</h1>
-    <p>Profesionalni servis mobilnih telefona – iPhone i Android.</p>
-    <div class="buttons">
-      <a href="tel:+38166366245">Pozovi</a>
-      <a href="https://wa.me/38166366245">WhatsApp</a>
+    <div class="hero-content">
+      <h1>D Mobil Pančevo</h1>
+      <p>Profesionalni servis mobilnih telefona – iPhone i Android.</p>
+      <div class="buttons">
+        <a href="tel:+38166366245">Pozovi</a>
+        <a href="https://wa.me/38166366245">WhatsApp</a>
+      </div>
     </div>
+
+    <div class="hero-image">
+      <img src="images/IMG_6290.jpg" alt="D Mobil Pančevo">
+    </div>
+
   </div>
 </header>
+
 
 <!-- USLUGE -->
 <section id="usluge" class="reveal">
