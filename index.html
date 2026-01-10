@@ -66,6 +66,15 @@ nav{
   font-size:28px;
   cursor:pointer;
 }
+  .box{
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
 
 /* MOBILE MENU */
 @media(max-width:900px){
@@ -131,6 +140,14 @@ header p{
   border-radius:30px;
   font-weight:600;
   text-decoration:none;
+}
+.buttons a{
+  transition: all .3s ease;
+}
+
+.buttons a:hover{
+  transform: translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 /* ================= SECTIONS ================= */
@@ -221,6 +238,15 @@ footer{
 }
 .hero-image img{
   box-shadow:0 25px 60px rgba(0,0,0,.25);
+}
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.hero-image img{
+  animation: float 6s ease-in-out infinite;
 }
 
 </style>
